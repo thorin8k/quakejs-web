@@ -137,7 +137,7 @@ master.connect = function (address, port, callback) {
 	var self = this;
 
 	var errored = false;
-	var ws = new WebSocket('ws://' + address + ':' + port);
+	var ws = new WebSocket('wss://' + address + ':' + port);
 	ws.binaryType = 'arraybuffer';
 
 	ws.onopen = function () {
@@ -169,7 +169,7 @@ master.connect = function (address, port, callback) {
 master.scanServer = function (server, callback) {
 	var self = this;
 
-	var ws = new WebSocket('ws://' + server.addr + ':' + server.port);
+	var ws = new WebSocket('wss://' + server.addr + ':' + server.port);
 	ws.binaryType = 'arraybuffer';
 	var start, end;
 	var finish = function (err, info) {

@@ -115,11 +115,13 @@ function loadConfig(configPath) {
 		port: 8080,
 		content: {
 			host: 'localhost',
-			port: 9000
+			port: 80,
+            proxy: 'quake.thorin.es'
 		},
 		master: {
 			host: 'localhost',
-			port: 27950
+			port: 27950,
+            proxy: 'quakemaster.thorin.es'
 		}
 	};
 

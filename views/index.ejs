@@ -1,30 +1,30 @@
 <% layout('default') -%>
 
-<% script(furl('/js/dashboard.js')) -%>
-<% script(furl('/js/master.js')) -%>
-<% script(furl('/js/practice.js')) -%>
-<% script(furl('/js/quakecolor.js')) -%>
-<% script(furl('/js/htmlescape.js')) -%>
-<% script(furl('/js/vendor/ejs.min.js')) -%>
-<% script(furl('/js/vendor/spin.min.js')) -%>
+<% script(furl('./js/dashboard.js')) -%>
+<% script(furl('./js/master.js')) -%>
+<% script(furl('./js/practice.js')) -%>
+<% script(furl('./js/quakecolor.js')) -%>
+<% script(furl('./js/htmlescape.js')) -%>
+<% script(furl('./js/vendor/ejs.min.js')) -%>
+<% script(furl('./js/vendor/spin.min.js')) -%>
 
 <script type="text/javascript">
 	document.addEventListener('DOMContentLoaded', function (event) {
 		var container = document.getElementById('practice-container');
 		practice.init(container, {
-			practice: new EJS({ url: '<%- furl('/practice.ejs') %>' }),
-			game: new EJS({ url: '<%- furl('/practice-game.ejs') %>' }),
-			mode: new EJS({ url: '<%- furl('/practice-mode.ejs') %>' }),
-			map: new EJS({ url: '<%- furl('/practice-map.ejs') %>' }),
-			bot: new EJS({ url: '<%- furl('/practice-bot.ejs') %>' })
+			practice: new EJS({ url: '<%- furl('./practice.ejs') %>' }),
+			game: new EJS({ url: '<%- furl('./practice-game.ejs') %>' }),
+			mode: new EJS({ url: '<%- furl('./practice-mode.ejs') %>' }),
+			map: new EJS({ url: '<%- furl('./practice-map.ejs') %>' }),
+			bot: new EJS({ url: '<%- furl('./practice-bot.ejs') %>' })
 		});
 
 		var container = document.getElementById('servers-container');
 		var host = '<%- config.master.host %>';
 		var port = '<%- config.master.port %>';
 		dashboard.init(container, host, port, {
-			servers: new EJS({ url: '<%- furl('/servers.ejs') %>' }),
-			server: new EJS({ url: '<%- furl('/server.ejs') %>' })
+			servers: new EJS({ url: '<%- furl('./servers.ejs') %>' }),
+			server: new EJS({ url: '<%- furl('./server.ejs') %>' })
 		});
 	});
 </script>

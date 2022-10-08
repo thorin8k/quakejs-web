@@ -2,11 +2,11 @@
 <html>
 	<head>
 		<title><%= (typeof title === 'undefined') ? 'quakejs.com' : title + ' - quakejs.com' %></title>
-		<link rel="stylesheet" href="<%- furl('/css/bootstrap.css') %>"></link>
-		<link rel="stylesheet" href="<%- furl('/css/font-awesome.min.css') %>"></link>
-		<link rel="stylesheet" href="<%- furl('/css/main.css') %>"></link>
+		<link rel="stylesheet" href="<%- furl('./css/bootstrap.css') %>"></link>
+		<link rel="stylesheet" href="<%- furl('./css/font-awesome.min.css') %>"></link>
+		<link rel="stylesheet" href="<%- furl('./css/main.css') %>"></link>
 		<%- stylesheets %>
-		<script type="text/javascript">
+		<!-- <script type="text/javascript">
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', 'UA-37328221-1']);
 			_gaq.push(['_trackPageview']);
@@ -15,7 +15,7 @@
 				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 			})();
-		</script>
+		</script> -->
 		<%- scripts %>
 	</head>
 	<body>

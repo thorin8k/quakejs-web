@@ -2,8 +2,8 @@
 <html>
 	<head>
 		<title><%= (typeof title === 'undefined') ? 'quakejs.com' : title + ' - quakejs.com' %></title>
-		<link rel="stylesheet" href="<%- furl('/css/game.css') %>"></link>
-		<script type="text/javascript" src="<%- furl('/js/ioquake3.js') %>"></script>
+		<link rel="stylesheet" href="<%- furl('./css/game.css') %>"></link>
+		<script type="text/javascript" src="<%- furl('./js/ioquake3.js') %>"></script>
 		<script type="text/javascript">
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', 'UA-37328221-1']);
@@ -72,7 +72,7 @@
 				window.addEventListener('resize', resizeViewport);
 
 				// merge default args with query string args
-				var args = ['+set', 'fs_cdn', '<%- config.content.host %>:<%- config.content.port %>', '+set', 'sv_master1', '<%- config.master.host %>:<%- config.master.port %>'];
+				var args = ['+set', 'fs_cdn', '<%- config.content.proxy %>', '+set', 'sv_master1', '<%- config.master.proxy %>:443'];
 				args.push.apply(args, getQueryCommands());
 				ioq3.callMain(args);
 			};
