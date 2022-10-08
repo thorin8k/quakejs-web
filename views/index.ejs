@@ -20,8 +20,8 @@
 		});
 
 		var container = document.getElementById('servers-container');
-		var host = '<%- config.master.host %>';
-		var port = '<%- config.master.port %>';
+		var host = 'quakemaster.thorin.es';//'<%- config.master.host %>';
+		var port = 443;//'<%- config.master.port %>';
 		dashboard.init(container, host, port, {
 			servers: new EJS({ url: '<%- ('servers.ejs') %>' }),
 			server: new EJS({ url: '<%- ('server.ejs') %>' })
